@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap');
+
+
+@layer customproperties{
+
+/* Colors */
+
+ :root {
+    --color-grey-900: #151515;
+    --color-grey-700: #444444;
+    --color-white: #ffffff;
+    --color-gold-500: #d5966c;
+
+
+    --ff-heading: "Big Shoulders Display", sans-serif;
+    --ff-body: "Outfit", sans-serif;
+  }
+
+
+
+}
+
+
+@layer reset{
+    /* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+}
+
+
+
+.blackbox{
+    background-color: black;
+}
+
+
+.container{
+    max-width: 1440px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.hero-background-container{
+    display: grid;
+    grid-template-columns: clamp(0px, 31vw, 450px) 540px 1fr;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+.hero{
+    isolation: isolate;
+}
+
+h1{
+    mix-blend-mode: difference;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Big Shoulders Display";
+}
+
+.hero-text-container{
+   display: flex;
+   flex-direction: column;
+   max-width: 350px;
+   gap: 4rem;
+}
+
+.hero-text{
+font-family: Outfit;
+font-size: 22px;
+font-style: normal;
+font-weight: 300;
+line-height: 140%; /* 30.8px */
+}
+
+.btn-link{
+    display: flex;
+    flex-direction: row;
+    max-width: 260px;
+    text-decoration: none;
+}
+
+.btn-link span{
+    text-decoration: none;
+    background-color: black;
+    padding: 1.5rem 2rem;
+    font-size: 20px;
+    letter-spacing: 3.6px;
+    font-family: "Big Shoulders Display";
+    text-decoration: none;
+    color: white;
+}
+
+.arrow-right{
+    background-color: var(--color-gold-500);
+    padding: 1.5rem;
+}
+
+@media (max-width: 1150px){
+   .hero-content{
+    justify-content: space-between;
+    align-self: space-between;
+    border: 2px solid red;
+   }
+}
+
+@media (max-width: 975px){
+   .hero-content{
+    flex-direction: column;
+    border: 2px solid red;
+    color: black;
+    z-index: 2;
+    gap: 2.5rem;
+    position: absolute;
+    justify-content: space-evenly;
+
+   }
+   
+   .blackbox{
+    display: none;
+   }
+
+   .hero-background-container{
+    grid-template-columns: 465px minmax(0,1fr);
+
+   }
+
+   h1{
+    color: black;
+    font-size: 70px;
+    z-index: 3;
+    margin-left: 225px;
+    align-self: flex-end;
+
+   }
+
+   .hero-text-container{
+    margin-left: 225px;
+    align-self: flex-end;
+   }
+
+
+
+}
+
+@media (max-width: 716px){
+    .hero-background-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    .hero-content{
+        position: relative;
+        margin: 0;
+    }
+    h1{
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .hero-text-container{
+        align-self: flex-start;
+        margin: 0;
+    }
+}
+ 
