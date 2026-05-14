@@ -179,6 +179,7 @@ line-height: 140%; /* 30.8px */
     gap: 2.5rem;
     position: absolute;
     justify-content: space-evenly;
+    align-items: center;
 
    }
    
@@ -191,18 +192,20 @@ line-height: 140%; /* 30.8px */
 
    }
 
+
    .hero-heading{
     color: black;
     font-size: 70px;
     z-index: 3;
-    margin-left: 225px;
+    margin-left: 0px;
     align-self: flex-end;
+    margin-right: 3rem;
 
    }
 
    .hero-text-container{
-    margin-left: 225px;
     align-self: flex-end;
+    margin-right: 1.5rem;
    }
 
 
@@ -220,6 +223,7 @@ line-height: 140%; /* 30.8px */
     .hero-content{
         position: relative;
         margin: 0;
+        padding-inline-start: 1rem;
     }
     .hero-heading{
         align-self: flex-start;
