@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
-h1{
+.hero-heading{
     mix-blend-mode: difference;
     font-size: 96px;
     font-style: normal;
@@ -191,7 +191,7 @@ line-height: 140%; /* 30.8px */
 
    }
 
-   h1{
+   .hero-heading{
     color: black;
     font-size: 70px;
     z-index: 3;
@@ -221,7 +221,7 @@ line-height: 140%; /* 30.8px */
         position: relative;
         margin: 0;
     }
-    h1{
+    .hero-heading{
         align-self: flex-start;
         margin: 0;
     }
@@ -475,5 +475,157 @@ max-width: 430px;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2.5rem;
+  }
+}
+
+/* Location Styles */
+
+.map-container{
+  position: relative;
+  z-index: 1;
+}
+
+.map-container .btn-link{
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 100px;
+}
+
+.location-heading{
+  font-family: "Big Shoulders Display";
+font-size: 70px;
+font-style: normal;
+font-weight: 900;
+line-height: 100%; 
+text-transform: uppercase;
+}
+
+.btn-link{
+    display: flex;
+    flex-direction: row;
+    max-width: 260px;
+    text-decoration: none;
+}
+
+.btn-link span{
+    text-decoration: none;
+    background-color: black;
+    padding: 24px 32px;
+    font-size: 20px;
+    letter-spacing: 3.6px;
+    font-family: "Big Shoulders Display";
+    text-decoration: none;
+    color: white;
+    text-wrap: nowrap;
+}
+
+.arrow-left{
+    background-color: var(--color-gold-500);
+    padding: 24px;
+}
+
+
+.location{
+  background-color: var(--color-grey-900);
+  padding: 130px 165px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+}
+
+.location-address-container{
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.address{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Outfit";
+  font-size: 22px;
+  font-style: normal;
+font-weight: 300;
+line-height: 140%; 
+}
+
+.address-accent{
+  font-family: "Big Shoulders Display";
+font-size: 36px;
+font-style: normal;
+font-weight: 900;
+line-height: 100%;
+text-transform: uppercase;
+color: var(--color-gold-500);
+}
+
+.location-footer{
+  background-color: var(--color-gold-500);
+  
+}
+
+.location-footer .footer-text{
+  color: var(--color-grey-900);
+}
+
+.location-footer .social-link{
+  fill: var(--color-grey-900)
+}
+
+.location-footer a:hover .social-link{
+  fill: var(--color-white);
+}
+
+/* 
+Location Media Queries
+
+*/
+
+.map-image{
+  width: 100%;
+  max-width: 1440px;
+  object-fit: cover;
+}
+
+
+
+@media (max-width:1280px){
+
+.location{
+  padding: 80px 40px;
+  justify-content: space-around;
+}
+
+.location h1{
+  font-size: 55px;
+  max-width: 223px;
+  color: white;
+}
+
+.address{
+  font-size: 18px;
+}
+.location-address-container{
+  max-width: 398px;
+}
+
+.address-accent{
+  font-size: 36px;
+}
+
+}
+
+@media (max-width: 768px){
+  .location{
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .map-container .btn-link{
+    left: 10px;
   }
 }
