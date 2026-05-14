@@ -519,6 +519,7 @@ text-transform: uppercase;
     text-wrap: nowrap;
 }
 
+
 .arrow-left{
     background-color: var(--color-gold-500);
     padding: 24px;
@@ -579,6 +580,17 @@ color: var(--color-gold-500);
   fill: var(--color-white);
 }
 
+
+.btn-link:hover span{
+ background-color: var(--color-gold-500);
+}
+.btn-link:hover img{
+  background-color: var(--color-grey-900);
+}
+
+a:focus{
+  outline: 1px solid var(--color-gold-500);
+}
 /* 
 Location Media Queries
 
