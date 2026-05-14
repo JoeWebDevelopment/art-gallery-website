@@ -462,7 +462,6 @@ max-width: 430px;
 
   .footer-content{
     justify-content: space-evenly;
-    border: 2px solid pink;
     padding: 48px 40px;
   }
 
